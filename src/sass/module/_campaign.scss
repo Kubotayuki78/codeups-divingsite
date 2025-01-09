@@ -1,0 +1,45 @@
+@use "global" as *;
+.campaign {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(120);
+    overflow: hidden;
+  }
+}
+
+.campaign__inner {
+  position: relative;
+}
+
+.campaign__heading {
+  padding-top: rem(4);
+
+  @include mq("md") {
+    padding-top: rem(1);
+  }
+}
+
+.campaign__cards {
+  margin-top: rem(32);
+
+  @include mq("md") {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+  }
+
+  @include mq("md") {
+    margin-top: rem(45);
+  }
+}
+
+.campaign__card {
+}
+
+.campaign__button {
+  margin-top: rem(30);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(70);
+  }
+}

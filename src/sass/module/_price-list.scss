@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.price-list {
+}
+
+.price-list__title {
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: 1.5;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $accent-color;
+
+  @include mq("md") {
+    padding-bottom: rem(3);
+  }
+}
+
+.price-list__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.price-list__body dt,
+.price-list__body dd {
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1.7;
+  margin-top: rem(8);
+
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.price-list__body dt {
+  @include mq("md") {
+    min-width: rem(250);
+  }
+}
+.price-list__body dd {
+  text-align: right;
+}

@@ -1,0 +1,90 @@
+@use "global" as *;
+.price {
+  background-color: #ddf0f1;
+  padding-top: rem(80);
+  padding-bottom: rem(84);
+
+  @include mq("md") {
+    position: relative;
+    padding-top: rem(100);
+    padding-bottom: rem(102);
+  }
+}
+
+.price__inner {
+}
+
+.price__heading {
+  padding-top: rem(5);
+}
+
+.price__content {
+  @include mq("md") {
+    display: flex;
+    margin-top: rem(44);
+    gap: rem(93);
+  }
+}
+
+.price__head-image {
+  margin-top: rem(31);
+  aspect-ratio: 345/227; // 幅 / 高さ
+  overflow: hidden;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.price__bg-image {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    bottom: rem(60);
+    left: rem(100);
+    width: 30%;
+    max-width: 437px;
+  }
+}
+
+.price__head-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price__lists {
+  margin-top: rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include mq("md") {
+    margin-top: rem(0);
+    width: 45.6%;
+  }
+}
+
+.price__list {
+}
+
+.price__pc-image {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    width: 100%;
+    max-width: rem(492);
+  }
+}
+
+.price__button {
+  margin-top: rem(38);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

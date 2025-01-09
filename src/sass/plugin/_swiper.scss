@@ -1,0 +1,93 @@
+@use "global" as *;
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 80%;
+}
+
+/* 前へ次への矢印カスタマイズ */
+
+.campaign-swiper-arrow {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.campaign-swiper-arrow__wrapper {
+  @include mq("md") {
+    position: absolute;
+    top: 0;
+    right: rem(25);
+    display: inline-flex;
+    gap: rem(80);
+  }
+}
+
+.campaign-swiper-arrow__prev,
+.campaign-swiper-arrow__next {
+  width: rem(80);
+  height: rem(80);
+  border-radius: 50%;
+  border: 1px solid $accent-color;
+  background-color: $white;
+  transition: background-color 0.3s ease;
+}
+
+.campaign-swiper-arrow__prev::before,
+.campaign-swiper-arrow__prev::after,
+.campaign-swiper-arrow__next::before,
+.campaign-swiper-arrow__next::after {
+  content: "";
+  background-color: $accent-color;
+  transition: background-color 0.5s;
+  position: absolute;
+}
+
+.campaign-swiper-arrow__next::before,
+.campaign-swiper-arrow__next::after {
+  right: rem(20);
+}
+
+.campaign-swiper-arrow__prev::before,
+.campaign-swiper-arrow__prev::after {
+  left: rem(20);
+}
+
+.campaign-swiper-arrow__prev::before,
+.campaign-swiper-arrow__next::before {
+  top: calc(50% - 2px);
+  width: rem(10);
+  height: rem(1);
+}
+
+.campaign-swiper-arrow__prev::before {
+  transform: translateY(calc(-50% - 1px)) rotate(-37deg);
+}
+
+.campaign-swiper-arrow__next::before {
+  transform: translateY(calc(-50% - 1px)) rotate(37deg);
+}
+
+.campaign-swiper-arrow__prev::after,
+.campaign-swiper-arrow__next::after {
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(40);
+  height: rem(1);
+}
+
+.campaign-swiper-arrow__prev:hover,
+.campaign-swiper-arrow__next:hover {
+  background-color: $accent-color;
+}
+
+.campaign-swiper-arrow__prev:hover.campaign-swiper-arrow__prev::before,
+.campaign-swiper-arrow__prev:hover.campaign-swiper-arrow__prev::after,
+.campaign-swiper-arrow__next:hover.campaign-swiper-arrow__next::before,
+.campaign-swiper-arrow__next:hover.campaign-swiper-arrow__next::after {
+  background-color: $white;
+}

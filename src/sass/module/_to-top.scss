@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.to-top {
+  position: fixed;
+  right: rem(15);
+  bottom: rem(15);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid $accent-color;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 100;
+
+  @include mq("md") {
+    right: rem(20);
+    bottom: rem(20);
+  }
+}
+
+.to-top a {
+  display: block;
+  width: rem(46);
+  height: rem(46);
+  background-color: #fff;
+  position: relative;
+  transition: background-color 0.3s;
+
+  @include mq("md") {
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.to-top a span {
+  position: absolute;
+  background-color: transparent;
+  width: rem(4);
+  height: rem(28);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq("md") {
+    width: rem(6);
+    height: rem(40);
+  }
+}
+
+.to-top a:hover {
+  background-color: $accent-color;
+}
+
+.to-top a span::before,
+.to-top a span::after {
+  position: absolute;
+  content: "";
+  background-color: $accent-color;
+  transition: background-color 0.5s;
+}
+
+.to-top a span::before {
+  top: 0;
+  left: rem(-2);
+  width: 1px;
+  height: 10px;
+  transform: rotate(40deg);
+  @include mq("md") {
+    left: 0;
+  }
+}
+
+.to-top a span::after {
+  top: rem(16);
+  right: rem(2);
+  transform: translateY(-50%);
+  width: rem(1);
+  height: rem(28);
+
+  @include mq("md") {
+    top: rem(20);
+
+    width: rem(1);
+    height: rem(40);
+  }
+}
+
+.to-top a:hover span::before,
+.to-top a:hover span::after {
+  background-color: $white;
+}

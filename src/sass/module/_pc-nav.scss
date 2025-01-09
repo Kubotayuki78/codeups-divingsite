@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.pc-nav {
+}
+
+.pc-nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(40);
+}
+.pc-nav__item {
+  text-align: center;
+}
+
+.pc-nav__item a {
+  color: #fff;
+  font-family: $english-family;
+  font-size: rem(18);
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.pc-nav__item a span {
+  position: relative;
+  margin-top: rem(4);
+  display: block;
+  color: #fff;
+  font-family: $base-font-family;
+  font-size: rem(10);
+  line-height: 1.5;
+}
+
+.pc-nav__item a span::after {
+  position: absolute;
+  bottom: rem(-4);
+  right: rem(-4);
+  content: "";
+  width: calc(100% + rem(6));
+  height: rem(1);
+  background: $white;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform 0.3s;
+}
+
+.pc-nav__item a span:hover::after {
+  transform: scale(1, 1);
+}
