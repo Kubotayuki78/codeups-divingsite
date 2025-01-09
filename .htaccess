@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "codeups"
+AuthUserFile /home/suno78/ours-webdesign.com/public_html/.htpasswd
+require valid-user
