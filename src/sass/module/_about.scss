@@ -5,7 +5,7 @@
   padding-bottom: rem(72);
 
   @include mq("md") {
-    margin-top: rem(135);
+    margin-top: rem(125);
     padding-bottom: rem(164);
     overflow: hidden;
   }
@@ -13,7 +13,9 @@
 
 .about__inner {
   position: relative;
+  max-width: rem(600);
 }
+
 
 .about__heading {
   padding-top: rem(8);

@@ -152,6 +152,7 @@ a {
 }
 
 .about__inner {
+	max-width: 37.5rem;
 	position: relative;
 }
 
@@ -225,6 +226,10 @@ a {
 	padding: 1rem 1rem 1.5rem 1rem;
 }
 
+.blog-card:hover .blog-card__image img {
+	transform: scale(1.1);
+}
+
 .blog-card__image {
 	aspect-ratio: 301/201;
 	overflow: hidden;
@@ -234,6 +239,7 @@ a {
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;
+	transition: transform 0.3s;
 	width: 100%;
 }
 
@@ -275,6 +281,10 @@ a {
 
 .blog__bg-image {
 	display: none;
+}
+
+.blog__inner {
+	max-width: 37.5rem;
 }
 
 .blog__heading {
@@ -694,6 +704,11 @@ div.colorbox-fv img {
 	padding: 1.3125rem 1.5rem;
 }
 
+.footer-nav__heading a:hover,
+.footer-nav__body li a:hover {
+	opacity: 0.6;
+}
+
 .footer-nav__body li a {
 	display: block;
 	line-height: 1;
@@ -752,17 +767,19 @@ div.colorbox-fv img {
 }
 
 .fv {
+	height: 100vh;
 	position: relative;
 }
 
 .fv__image {
 	aspect-ratio: 375/667;
+	height: 100vh;
 	overflow: hidden;
+	width: 100%;
 }
 
-.fv__img picture {
+.fv__image picture {
 	-o-object-fit: cover;
-	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
@@ -804,10 +821,6 @@ div.colorbox-fv img {
 	z-index: 1000;
 }
 
-.header.is-color {
-	background-color: #21054d;
-}
-
 .header__inner {
 	align-items: center;
 	display: flex;
@@ -818,6 +831,11 @@ div.colorbox-fv img {
 
 .header__logo {
 	z-index: 51;
+}
+
+.header__logo a img {
+	height: 2.375rem;
+	width: 6.375rem;
 }
 
 .header__pc-nav {
@@ -853,6 +871,10 @@ div.colorbox-fv img {
 	background-color: #ddf0f1;
 	padding-bottom: 5.125rem;
 	padding-top: 5rem;
+}
+
+.info__inner {
+	max-width: 37.5rem;
 }
 
 .info__heading {
@@ -915,6 +937,116 @@ div.colorbox-fv img {
 	width: 100%;
 }
 
+.campaign-card {
+	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+	max-width: 100%;
+}
+
+.campaign-card__image {
+	aspect-ratio: 288/190;
+	overflow: hidden;
+}
+
+.campaign-card__img img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.campaign-card__body {
+	padding: 1rem 1rem 1.625rem 1rem;
+}
+
+.campaign-card__body-tag {
+	align-items: center;
+	border: 1px solid #408f95;
+	color: #408f95;
+	display: inline-block;
+	font-size: 0.75rem;
+	line-height: 1.375rem;
+	padding: 0.25rem 0.75rem;
+}
+
+.campaign-card__body-title {
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.5rem;
+	margin-top: 0.25rem;
+	position: relative;
+}
+
+.campaign-card__body-title::after {
+	background-color: #408f95;
+	bottom: -0.5rem;
+	content: "";
+	display: block;
+	height: 0.0625rem;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.campaign-card__body-text {
+	font-size: 0.875rem;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.campaign-card__body-price {
+	align-items: flex-end;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 0.5rem;
+}
+
+.campaign-card__body-price-before,
+.campaign-card__body-price-after {
+	font-family: "Lato";
+	font-weight: 700;
+	line-height: 1;
+}
+
+.campaign-card__body-price-before {
+	-webkit-text-decoration: line-through;
+	font-size: 1.25rem;
+	text-decoration: line-through;
+	text-decoration-color: #c94800;
+	text-decoration-thickness: 3px; /* 線の太さ */
+}
+
+.campaign-card__body-price-after {
+	color: #408f95;
+	font-size: 2rem;
+}
+
+.cardSwiper {
+	padding-bottom: 0.625rem;
+}
+
+.page-campaign__heading {
+	padding-top: 0.25rem;
+}
+
+.campaign__cards {
+	margin-top: 2rem;
+}
+
+.campaign__button {
+	margin-top: 1.875rem;
+	text-align: center;
+}
+
+.page-heading-en {
+	color: #fff;
+	font-family: Lato;
+	font-size: 2.5rem;
+	font-weight: 400;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
 .pc-nav__items {
 	align-items: center;
 	display: flex;
@@ -931,6 +1063,8 @@ div.colorbox-fv img {
 	font-family: "Gotu", serif;
 	font-size: 1.125rem;
 	line-height: 1;
+	padding-bottom: 2.5rem;
+	padding-top: 1.25rem;
 	transition: color 0.3s;
 }
 
@@ -1035,14 +1169,11 @@ div.colorbox-fv img {
 	display: none;
 	height: 100vh;
 	left: 0;
+	overflow-y: scroll;
 	position: absolute;
 	right: 0;
 	top: 0;
 	width: 100%;
-}
-
-.sp-nav.is-active {
-	display: block;
 }
 
 .sp-nav__heading {
@@ -1217,6 +1348,10 @@ div.colorbox-fv img {
 	padding-top: 5rem;
 }
 
+.voice__inner {
+	max-width: 37.5rem;
+}
+
 .voice__bg-image-fishes {
 	display: none;
 }
@@ -1261,6 +1396,7 @@ div.colorbox-fv img {
 	background-color: #fff;
 	border: 1px solid #408f95;
 	border-radius: 50%;
+	cursor: pointer;
 	height: 5rem;
 	transition: background-color 0.3s ease;
 	width: 5rem;
@@ -1321,6 +1457,76 @@ div.colorbox-fv img {
 	background-color: #fff;
 }
 
+.wrap {
+	overflow-x: scroll;
+}
+
+.wrap ul {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+	width: 810px;
+}
+
+.wrap li {
+	border: 1px solid #000;
+	padding: 10px;
+	padding-bottom: 50px;
+	position: relative;
+	width: 32%;
+}
+
+.wrap figure {
+	margin: 0 0 5px;
+}
+
+.wrap img {
+	height: 150px;
+	width: 100%;
+}
+
+.wrap .ttl {
+	font-widht: bold;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.wrap .txt {
+	margin-bottom: 10px;
+}
+
+.wrap .btn {
+	background-color: #000;
+	border-radius: 20px;
+	color: #fff;
+	display: block;
+	margin-left: auto;
+	padding: 10px 10px;
+	text-align: center;
+	width: 200px;
+}
+
+.caed-wrapper {
+	display: flex;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+}
+
+.card-content {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.card-text {
+	flex-grow: 1;
+}
+
 @media screen and (min-width: 768px) {
 
 .u-desktop {
@@ -1336,7 +1542,7 @@ html {
 }
 
 .about {
-	margin-top: 8.4375rem;
+	margin-top: 7.8125rem;
 	overflow: hidden;
 	padding-bottom: 10.25rem;
 }
@@ -1478,6 +1684,7 @@ html {
 .campaign {
 	margin-top: 7.5rem;
 	overflow: hidden;
+	padding-bottom: 0.625rem;
 }
 
 .campaign__heading {
@@ -1710,6 +1917,57 @@ html {
 	max-width: 1130px;
 	padding-left: 25px;
 	padding-right: 25px;
+}
+
+.campaign-card__image {
+	aspect-ratio: 333/223;
+}
+
+.campaign-card__body {
+	padding: 1.5rem 1rem 2.5rem;
+}
+
+.campaign-card__body-tag {
+	padding: 0.3125rem 0.9375rem;
+}
+
+.campaign-card__body-text {
+	font-size: 1rem;
+	margin-top: 1.5rem;
+}
+
+.campaign-card__body-price {
+	gap: 1.5625rem;
+}
+
+.campaign-card__body-price-before {
+	font-size: 1.5rem;
+}
+
+.campaign-card__body-price-after {
+	font-size: 2.5rem;
+}
+
+.page-campaign__heading {
+	padding-top: 0.0625rem;
+}
+
+.campaign__cards {
+	margin-right: calc(50% - 50vw);
+	width: 100vw;
+}
+
+.campaign__cards {
+	margin-top: 2.8125rem;
+}
+
+.campaign__button {
+	margin-top: 4.375rem;
+}
+
+.page-heading-en {
+	font-size: 5rem;
+	line-height: 1.25;
 }
 
 .price-list__title {
