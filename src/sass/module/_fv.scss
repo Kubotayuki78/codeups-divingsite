@@ -1,20 +1,23 @@
 @use "global" as *;
 .fv {
   position: relative;
+  height: 100vh;
 }
 
 .fv__image {
   aspect-ratio: 375 / 667; // 幅 / 高さ
   overflow: hidden;
+  height: 100vh;
+  width: 100%;
 
   @include mq("md") {
     aspect-ratio: 1440 / 768;
   }
 }
 
-.fv__img picture {
+.fv__image picture {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   object-fit: cover;
 }
 

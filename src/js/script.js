@@ -57,9 +57,9 @@ jQuery(function ($) {
     loop: true,
     allowTouchMove: false,
     clickable: false,
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
   });
 
   const swiper2 = new Swiper(".cardSwiper", {

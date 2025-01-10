@@ -1,0 +1,17 @@
+@use "global" as *;
+.page-heading {
+}
+
+.page-heading-en {
+  color: $white;
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: rem(40);
+  font-weight: 400;
+  line-height: 1;
+
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: 1.25;
+  }
+}

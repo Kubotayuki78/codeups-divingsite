@@ -54,11 +54,12 @@ jQuery(function ($) {
   var swiper = new Swiper(".fvSwiper", {
     loop: true,
     allowTouchMove: false,
-    clickable: false,
-    autoplay: {
-      delay: 3000
-    }
+    clickable: false
+    // autoplay: {
+    //   delay: 3000,
+    // },
   });
+
   var swiper2 = new Swiper(".cardSwiper", {
     slidesPerView: "1.2",
     spaceBetween: 20,

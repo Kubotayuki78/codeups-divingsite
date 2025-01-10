@@ -9,10 +9,15 @@
   width: 100%;
   height: 100vh;
   background-color: $accent-color;
+  overflow-y: scroll;
 }
 
-.sp-nav.is-active {
-  display: block;
+// .sp-nav.is-checked {
+//   display: none;
+// }
+
+
+.header__sp-nav.sp-nav {
 }
 
 .sp-nav__heading {
