@@ -1,7 +1,7 @@
 @use "global" as *;
 .campaign {
   margin-top: rem(40);
-  
+
   @include mq("md") {
     margin-top: rem(120);
     overflow: hidden;
@@ -23,13 +23,11 @@
 
 .campaign__cards {
   margin-top: rem(32);
+  display: grid;
 
   @include mq("md") {
     width: 100vw;
     margin-right: calc(50% - 50vw);
-  }
-
-  @include mq("md") {
     margin-top: rem(45);
   }
 }
