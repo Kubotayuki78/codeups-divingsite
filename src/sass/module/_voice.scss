@@ -50,11 +50,12 @@
 
 .voice__cards {
   padding-top: rem(46);
-  display: flex;
-  flex-direction: column;
   gap: rem(40);
-
+  display: grid;
+  
+  
   @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
     padding-top: rem(33);
     flex-direction: row;
   }

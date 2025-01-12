@@ -292,9 +292,9 @@ a {
 }
 
 .blog__cards {
-	display: flex;
-	flex-direction: column;
-	gap: 2.5625rem;
+	grid-gap: 40px;
+	display: grid;
+	gap: 40px;
 	margin-top: 1.875rem;
 }
 
@@ -393,7 +393,7 @@ a {
 	overflow: hidden;
 }
 
-.campaign-card__img img {
+.campaign-card__image img {
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;
@@ -863,6 +863,7 @@ div.colorbox-fv img {
 .heading__title-ja {
 	color: #408f95;
 	font-size: 0.75rem;
+	font-weight: 400;
 	line-height: 1;
 	padding-top: 0.625rem;
 }
@@ -935,6 +936,48 @@ div.colorbox-fv img {
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 100%;
+}
+
+.mv {
+	height: 100vh;
+	position: relative;
+}
+
+.mv__image {
+	aspect-ratio: 375/667;
+	overflow: hidden;
+}
+
+.mv__image img {
+	-o-object-fit: cover;
+	height: 100vh;
+	object-fit: cover;
+	width: 100%;
+}
+
+.mv__heading {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+.mv__title {
+	color: #fff;
+	font-family: Lato;
+	font-size: 2.5rem;
+	font-weight: 400;
+	letter-spacing: 21.6px;
+	margin-left: 1.35rem;
+}
+
+.mv__subtitle {
+	color: #fff;
+	font-family: Gotu;
+	font-size: 1.25rem;
+	line-height: 1;
+	text-align: center;
 }
 
 .campaign-card {
@@ -1103,9 +1146,14 @@ div.colorbox-fv img {
 	padding-bottom: 0.25rem;
 }
 
-.price-list__body {
+.price-list {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.price-list li {
+	display: flex;
 	justify-content: space-between;
 }
 
@@ -1151,12 +1199,19 @@ div.colorbox-fv img {
 .price__lists {
 	display: flex;
 	flex-direction: column;
-	gap: 40px;
+	gap: 0.75rem;
 	margin-top: 2.5rem;
 }
 
 .price__pc-image {
 	display: none;
+}
+
+.price__pc-image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .price__button {
@@ -1365,8 +1420,8 @@ div.colorbox-fv img {
 }
 
 .voice__cards {
-	display: flex;
-	flex-direction: column;
+	grid-gap: 2.5rem;
+	display: grid;
 	gap: 2.5rem;
 	padding-top: 2.875rem;
 }
@@ -1457,76 +1512,6 @@ div.colorbox-fv img {
 	background-color: #fff;
 }
 
-.wrap {
-	overflow-x: scroll;
-}
-
-.wrap ul {
-	display: flex;
-	justify-content: space-between;
-	list-style-type: none;
-	padding: 0;
-	width: 810px;
-}
-
-.wrap li {
-	border: 1px solid #000;
-	padding: 10px;
-	padding-bottom: 50px;
-	position: relative;
-	width: 32%;
-}
-
-.wrap figure {
-	margin: 0 0 5px;
-}
-
-.wrap img {
-	height: 150px;
-	width: 100%;
-}
-
-.wrap .ttl {
-	font-widht: bold;
-	font-size: 20px;
-	margin-bottom: 5px;
-}
-
-.wrap .txt {
-	margin-bottom: 10px;
-}
-
-.wrap .btn {
-	background-color: #000;
-	border-radius: 20px;
-	color: #fff;
-	display: block;
-	margin-left: auto;
-	padding: 10px 10px;
-	text-align: center;
-	width: 200px;
-}
-
-.caed-wrapper {
-	display: flex;
-}
-
-.card {
-	display: flex;
-	flex-direction: column;
-	width: 150px;
-}
-
-.card-content {
-	display: flex;
-	flex: 1 1 auto;
-	flex-direction: column;
-}
-
-.card-text {
-	flex-grow: 1;
-}
-
 @media screen and (min-width: 768px) {
 
 .u-desktop {
@@ -1609,12 +1594,23 @@ html {
 }
 
 .blog {
+	margin-top: 0;
+	padding-top: 6.25rem;
+}
+
+.blog::before {
 	background-image: url("../images/common/blog-bg.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
-	background-size: contain;
-	margin-top: 0;
+	background-size: cover;
+	content: "";
+	height: 500px; /* 高さを適切に設定 */
+	left: 0;
 	padding-top: 6.25rem;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -2;
 }
 
 .blog__bg-image {
@@ -1645,6 +1641,7 @@ html {
 
 .blog__cards {
 	flex-direction: row;
+	grid-template-columns: repeat(3, 1fr);
 	margin-top: 5.375rem;
 }
 
@@ -1919,6 +1916,19 @@ html {
 	padding-right: 25px;
 }
 
+.mv__title {
+	font-size: 5rem;
+	font-weight: 400;
+	letter-spacing: 43.2px;
+	line-height: 1;
+	margin-left: 2.7rem;
+}
+
+.mv__subtitle {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
 .campaign-card__image {
 	aspect-ratio: 333/223;
 }
@@ -2015,8 +2025,10 @@ html {
 }
 
 .price__pc-image {
+	aspect-ratio: 492/746;
 	display: block;
 	max-width: 30.75rem;
+	overflow: hidden;
 	width: 100%;
 }
 
@@ -2115,6 +2127,7 @@ html {
 
 .voice__cards {
 	flex-direction: row;
+	grid-template-columns: repeat(2, 1fr);
 	padding-top: 2.0625rem;
 }
 

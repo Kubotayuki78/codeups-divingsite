@@ -1,8 +1,4 @@
 @use "global" as *;
-
-.price-list {
-}
-
 .price-list__title {
   font-size: rem(16);
   font-weight: 700;
@@ -15,11 +11,23 @@
   }
 }
 
-.price-list__body {
+.price-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: rem(8);
+  // max-width: rem(600);
+}
+
+.price-list li {
+  display: flex;
   justify-content: space-between;
 }
+
+// .price-list__body {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// }
 
 .price-list__body dt,
 .price-list__body dd {

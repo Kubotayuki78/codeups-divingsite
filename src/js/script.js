@@ -15,7 +15,6 @@ jQuery(function ($) {
     }
   });
 
-
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
     $("body,html").animate(
@@ -57,9 +56,9 @@ jQuery(function ($) {
     loop: true,
     allowTouchMove: false,
     clickable: false,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
   });
 
   const swiper2 = new Swiper(".cardSwiper", {

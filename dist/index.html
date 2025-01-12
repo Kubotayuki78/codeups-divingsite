@@ -149,7 +149,78 @@
     </header>
 
     <main>
-      <section class="fv">
+      <section class="mv">
+        <div class="mv__inner">
+          <div class="swiper fvSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="mv__image">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./assets/images/common/fv-1-pc.jpg"
+                    />
+                    <img
+                      src="./assets/images/common/fv-1-sp.jpg"
+                      alt=""
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mv__image">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./assets/images/common/fv-2-pc.jpg"
+                    />
+                    <img
+                      src="./assets/images/common/fv-2-sp.jpg"
+                      alt=""
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mv__image">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./assets/images/common/fv-3-pc.jpg"
+                    />
+                    <img
+                      src="./assets/images/common/fv-3-sp.jpg"
+                      alt=""
+                      decoding="async"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mv__image">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./assets/images/common/fv-1-pc.jpg"
+              />
+              <img
+                src="./assets/images/common/fv-1-sp.jpg"
+                alt=""
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <div class="mv__heading">
+            <h2 class="mv__title">DIVING</h2>
+            <p class="mv__subtitle">into the ocean</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="fv">
         <div class="fv__image">
           <div class="swiper fvSwiper">
             <div class="swiper-wrapper">
@@ -219,13 +290,13 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="campaign">
         <div class="campaign__inner inner">
           <div class="campaign__heading heading">
-            <h2 class="heading__title-en">campaign</h2>
-            <p class="heading__title-ja">キャンペーン</p>
+            <p class="heading__title-en">campaign</p>
+            <h2 class="heading__title-ja">キャンペーン</h2>
           </div>
           <div class="campaign__cards">
             <div class="swiper cardSwiper">
@@ -239,7 +310,9 @@
                   </div>
                   <div class="campaign-card__body">
                     <span class="campaign-card__body-tag">ライセンス講習</span>
-                    <h3 class="campaign-card__body-title">ライセンス講習ライセンス講習ライセンス講習ライセンス講習ライセンス講習ライセンス取得</h3>
+                    <h3 class="campaign-card__body-title">
+                      ライセンス講習ライセンス講習ライセンス講習ライセンス講習ライセンス講習ライセンス取得
+                    </h3>
                     <p class="campaign-card__body-text">
                       全部コミコミ(お一人様)
                     </p>
@@ -375,69 +448,11 @@
         </div>
       </section>
 
-      <div class="wrap">
-        <ul>
-          <li>
-            <figure class="img">
-              <img src="./assets/images/common/campaign4.jpg">
-            </figure>
-            <p class="ttl">flexについて</p>
-            <p class="txt">flexについてのテキストflexについてのテキストflexについてのテキストflexについてのテキスト</p>
-            <a class="btn">詳細を見る</a>
-          </li>
-          <li>
-            <figure class="img">
-              <img src="./assets/images/common/campaign4.jpg">
-            </figure>
-            <p class="ttl">gridについて</p>
-            <p class="txt">gridについてのテキストgridについてのテキストgridについてのテキストgridについてのテキスト</p>
-            <a class="btn">詳細を見る</a>
-          </li>
-          <li>
-            <figure class="img">
-              <img src="./assets/images/common/campaign4.jpg">
-            </figure>
-            <p class="ttl">floatについて</p>
-            <p class="txt">floatについてのテキストfloatについてのテキストfloatについてのテキストfloatについてのテキスト</p>
-            <a class="btn">詳細を見る</a>
-          </li>
-        </ul>
-      </div>
-
-
-      <div class="caed-wrapper">
-        <div class="card">
-          <img src="./assets/images/common/campaign4.jpg" alt="画像">
-          <div class="card-content">
-            <h2>タイトル</h2>
-            <p class="card-text">テキストテキストテキストテキストテキストテキストテキスト</p>
-            <p>カテゴリ</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/images/common/campaign4.jpg" alt="画像">
-          <div class="card-content">
-            <h2>タイトル</h2>
-            <p class="card-text">テキスト</p>
-            <p>カテゴリ</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/images/common/campaign4.jpg" alt="画像">
-          <div class="card-content">
-            <h2>タイトル</h2>
-            <p class="card-text">テキスト</p>
-            <p>カテゴリ</p>
-          </div>
-        </div>
-    </div>
-
-
       <section class="about">
         <div class="about__inner inner">
           <div class="about__heading heading">
-            <h2 class="heading__title-en">about us</h2>
-            <p class="heading__title-ja">私たちについて</p>
+            <p class="heading__title-en">about us</p>
+            <h2 class="heading__title-ja">私たちについて</h2>
           </div>
           <div class="about__images">
             <div class="about__image1">
@@ -484,8 +499,8 @@
       <section class="info">
         <div class="info__inner inner">
           <div class="info__heading heading">
-            <h2 class="heading__title-en">information</h2>
-            <p class="heading__title-ja">ダイビング情報</p>
+            <p class="heading__title-en">information</p>
+            <h2 class="heading__title-ja">ダイビング情報</h2>
           </div>
           <div class="info__content">
             <div class="info__image colorbox js-colorbox">
@@ -516,11 +531,11 @@
             />
           </div>
           <div class="blog__heading heading">
-            <h2 class="heading__title-en blog-heading__title-en">blog</h2>
-            <p class="heading__title-ja blog-heading__title-ja">ブログ</p>
+            <p class="heading__title-en blog-heading__title-en">blog</p>
+            <h2 class="heading__title-ja blog-heading__title-ja">ブログ</h2>
           </div>
           <div class="blog__cards">
-            <a href="" class="blog__card blog-card">
+            <a href="#" class="blog__card blog-card">
               <div class="blog-card__image">
                 <img
                   src="./assets/images/common/blog-1.jpg"
@@ -537,7 +552,7 @@
                 </p>
               </div>
             </a>
-            <a href="" class="blog__card blog-card">
+            <a href="#" class="blog__card blog-card">
               <div class="blog-card__image">
                 <img
                   src="./assets/images/common/blog-2.jpg"
@@ -550,6 +565,8 @@
                 >
                 <h3 class="blog-card__body-title">ウミガメと泳ぐ</h3>
                 <p class="blog-card__body-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                 </p>
               </div>
@@ -593,8 +610,8 @@
             />
           </div>
           <div class="voice__heading heading">
-            <h2 class="heading__title-en">voice</h2>
-            <p class="heading__title-ja">お客様の声</p>
+            <p class="heading__title-en">voice</p>
+            <h2 class="heading__title-ja">お客様の声</h2>
           </div>
           <div class="voice__cards">
             <div class="voice__card voice-card">
@@ -659,8 +676,8 @@
       <section class="price">
         <div class="price__inner inner">
           <div class="price__heading heading">
-            <h2 class="heading__title-en">price</h2>
-            <p class="heading__title-ja">料金一覧</p>
+            <p class="heading__title-en">price</p>
+            <h2 class="heading__title-ja">料金一覧</h2>
           </div>
           <div class="price__content">
             <div class="price__head-image">
@@ -676,52 +693,33 @@
               />
             </div>
             <div class="price__lists">
-              <div class="price__list price-list">
-                <h3 class="price-list__title">ライセンス講習</h3>
-                <dl class="price-list__body">
-                  <dt>オープンウォーターダイバーコース</dt>
-                  <dd>¥50,000</dd>
-                  <dt>アドバンスドオープンウォーターコース</dt>
-                  <dd>¥60,000</dd>
-                  <dt>レスキュー＋EFRコース</dt>
-                  <dd>¥70,000</dd>
-                </dl>
-              </div>
-              <div class="price__list price-list">
-                <h3 class="price-list__title">体験ダイビング</h3>
-                <dl class="price-list__body">
-                  <dt>ビーチ体験ダイビング(半日)</dt>
-                  <dd>¥7,000</dd>
-                  <dt>ビーチ体験ダイビング(1日)</dt>
-                  <dd>¥14,000</dd>
-                  <dt>ボート体験ダイビング(半日)</dt>
-                  <dd>¥10,000</dd>
-                  <dt>ボート体験ダイビング(1日)</dt>
-                  <dd>¥18,000</dd>
-                </dl>
-              </div>
-              <div class="price__list price-list">
-                <h3 class="price-list__title">ファンダイビング</h3>
-                <dl class="price-list__body">
-                  <dt>ビーチダイビング(2ダイブ)</dt>
-                  <dd>¥14,000</dd>
-                  <dt>ボートダイビング(2ダイブ)</dt>
-                  <dd>¥18,000</dd>
-                  <dt>スペシャルダイビング(2ダイブ)</dt>
-                  <dd>¥24,000</dd>
-                  <dt>ナイトダイビング(1ダイブ)</dt>
-                  <dd>¥10,000</dd>
-                </dl>
-              </div>
-              <div class="price__list price-list">
-                <h3 class="price-list__title">スペシャルダイビング</h3>
-                <dl class="price-list__body">
-                  <dt>貸切ダイビング(2ダイブ)</dt>
-                  <dd>¥14,000</dd>
-                  <dt>1日ダイビング(3ダイブ)</dt>
-                  <dd>¥18,000</dd>
-                </dl>
-              </div>
+              <h3 class="price-list__title">ライセンス講習</h3>
+              <ul class="price__list price-list">
+                <li>オープンウォーターダイバーコース<span>¥50,000</span></li>
+                <li>
+                  アドバンスドオープンウォーターコース<span>¥60,000</span>
+                </li>
+                <li>レスキュー＋EFRコース<span>¥70,000</span></li>
+              </ul>
+              <h3 class="price-list__title">体験ダイビング</h3>
+              <ul class="price__list price-list">
+                <li>ビーチ体験ダイビング(半日)<span>¥7,000</span></li>
+                <li>ビーチ体験ダイビング(1日)<span>¥14,000</span></li>
+                <li>ボート体験ダイビング(半日)<span>¥10,000</span></li>
+                <li>ボート体験ダイビング(1日)<span>¥18,000</span></li>
+              </ul>
+              <h3 class="price-list__title">ファンダイビング</h3>
+              <ul class="price__list price-list">
+                <li>ビーチダイビング(2ダイブ)<span>¥14,000</span></li>
+                <li>ボートダイビング(2ダイブ)<span>¥18,000</span></li>
+                <li>スペシャルダイビング(2ダイブ)<span>¥24,000</span></li>
+                <li>ナイトダイビング(1ダイブ)<span>¥10,000</span></li>
+              </ul>
+              <h3 class="price-list__title">スペシャルダイビング</h3>
+              <ul class="price__list price-list">
+                <li>貸切ダイビング(2ダイブ)<span>¥14,000</span></li>
+                <li>1日ダイビング(3ダイブ)<span>¥18,000</span></li>
+              </ul>
             </div>
             <div class="price__pc-image colorbox">
               <img
@@ -771,12 +769,12 @@
             </div>
             <div class="contact__right">
               <div class="contact__heading heading">
-                <h2 class="heading__title-en contact-heading__title-en">
+                <p class="heading__title-en contact-heading__title-en">
                   contact
-                </h2>
-                <p class="heading__title-ja contact-heading__title-ja">
-                  お問合せ
                 </p>
+                <h2 class="heading__title-ja contact-heading__title-ja">
+                  お問合せ
+                </h2>
               </div>
               <p class="contact__text">ご予約・お問い合わせはコチラ</p>
               <div class="contact__button">
