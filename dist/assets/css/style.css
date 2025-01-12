@@ -766,52 +766,6 @@ div.colorbox-fv img {
 	width: 100vw;
 }
 
-.fv {
-	height: 100vh;
-	position: relative;
-}
-
-.fv__image {
-	aspect-ratio: 375/667;
-	height: 100vh;
-	overflow: hidden;
-	width: 100%;
-}
-
-.fv__image picture {
-	-o-object-fit: cover;
-	object-fit: cover;
-	width: 100%;
-}
-
-.fv__heading {
-	color: #fff;
-	display: inline-block;
-	left: 50%;
-	overflow: hidden;
-	position: absolute;
-	top: 49%;
-	transform: translate(-50%, -50%);
-	z-index: 10;
-}
-
-.fv__title {
-	font-family: "lato", sans-serif;
-	font-size: 2.5rem;
-	font-weight: 400;
-	letter-spacing: 21.6px;
-	line-height: 1.5;
-	margin-left: 1.35rem;
-	text-align: center;
-}
-
-.fv__subtitle {
-	font-family: "Gotu", serif;
-	font-size: 20px;
-	line-height: 1;
-	text-align: center;
-}
-
 .header {
 	background-color: rgba(13, 41, 54, 0.6784313725);
 	height: 5rem;
@@ -1820,27 +1774,6 @@ html {
 
 .footer__copyright small {
 	font-size: 0.875rem;
-}
-
-.fv__image {
-	aspect-ratio: 1440/768;
-}
-
-.fv__heading {
-	top: 50%;
-}
-
-.fv__title {
-	font-size: 5rem;
-	font-weight: 400;
-	letter-spacing: 43.2px;
-	line-height: 1;
-	margin-left: 2.7rem;
-}
-
-.fv__subtitle {
-	font-size: 1.5rem;
-	text-align: center;
 }
 
 .header {
