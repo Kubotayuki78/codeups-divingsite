@@ -3,6 +3,7 @@
   font-size: rem(16);
   font-weight: 700;
   line-height: 1.5;
+  // margin-top: rem(40);
   padding-bottom: rem(4);
   border-bottom: 1px solid $accent-color;
 
@@ -11,16 +12,33 @@
   }
 }
 
+.price-list__title:not(:first-child) {
+  margin-top: rem(30);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
 .price-list {
   display: flex;
   flex-direction: column;
-  gap: rem(8);
+  gap: rem(12);
   // max-width: rem(600);
+
+  @include mq("md") {
+    gap: rem(8);
+  }
 }
 
 .price-list li {
   display: flex;
   justify-content: space-between;
+  font-size: rem(14);
+
+  @include mq("md") {
+    font-size: rem(16);
+  }
 }
 
 // .price-list__body {

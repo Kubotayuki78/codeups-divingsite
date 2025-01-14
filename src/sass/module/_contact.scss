@@ -3,8 +3,8 @@
 .contact {
   padding-top: rem(80);
   padding-bottom: rem(103);
-  position: relative;
   filter: drop-shadow(0px 3px 1px #ccc);
+  overflow: hidden;
 
   @include mq("md") {
     padding-top: rem(140);
@@ -13,6 +13,7 @@
 }
 
 .contact__inner {
+  position: relative;
   @include mq("md") {
     padding-left: rem(25);
     padding-right: rem(25);
@@ -21,14 +22,14 @@
 
 .contact__head-image {
   position: absolute;
-  top: rem(54);
+  top: rem(-27);
   right: rem(15);
   width: rem(109);
 
   @include mq("md") {
     width: rem(301);
-    top: rem(100);
-    right: rem(50);
+    top: rem(-39);
+    right: rem(-105);
   }
 }
 

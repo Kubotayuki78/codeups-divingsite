@@ -1,18 +1,12 @@
 @use "global" as *;
-
 .page-campaign {
 }
 
 .page-campaign__inner {
-}
-
-.page-fv {
+  position: relative;
 }
 
 .page-campaign__fv {
-}
-
-.page-fv-image {
 }
 
 .page-campaign__fv-image {
@@ -21,34 +15,68 @@
 .page-campaign__heading {
 }
 
-.page-heading {
-}
-
-.page-heading__title-en {
-}
-
-.breadcrumb {
-}
-
-.breadcrumb__inner {
-}
-
 .page-campaign__tags {
+  margin-top: rem(52);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 15px;
+
+  @include mq(md) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 21px 16px;
+    margin-top: rem(150);
+  }
 }
 
 .page-campaign__tag {
+  
+}
+
+.page-campaign__tag a {
+  display: inline-block;
+  width: 162px;
+  text-align: center;
+  padding: rem(6) rem(5);
+  line-height: 1.5714;
+  color: $accent-color;
+  background-color: $white;
+  border: 1px solid $accent-color;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-campaign__tag a:hover {
+  background-color: $accent-color;
+  color: $white;
+}
+
+.page-campaign__head-image {
+  position: absolute;
+  width: rem(301);
+  max-width: 100%;
+  top: rem(674);
+  left: rem(-65);
+  z-index: -1;
 }
 
 .page-campaign__cards {
-}
+  margin-top: rem(40);
+  padding-right: rem(33);
+  padding-left: rem(33);
+  display: grid;
+  gap: rem(80) rem(40);
+  grid-template-columns: repeat(2, 1fr);
 
-.campaign__card {
-}
+  @include mq("md") {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
-.campaign-card {
 }
 
 .page-campaign-card__image {
+  @include mq("md") {
+    aspect-ratio: 520/347;
+  }
 }
 
 .page-campaign-card__body {
@@ -73,36 +101,4 @@
 }
 
 .page-campaign__button {
-}
-
-.page-campaign__heading {
-  padding-top: rem(4);
-
-  @include mq("md") {
-    padding-top: rem(1);
-  }
-}
-
-.campaign__cards {
-  margin-top: rem(32);
-
-  @include mq("md") {
-    width: 100vw;
-    margin-right: calc(50% - 50vw);
-  }
-
-  @include mq("md") {
-    margin-top: rem(45);
-  }
-}
-
-.campaign__card {
-}
-
-.campaign__button {
-  margin-top: rem(30);
-  text-align: center;
-  @include mq("md") {
-    margin-top: rem(70);
-  }
 }

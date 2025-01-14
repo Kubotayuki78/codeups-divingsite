@@ -4,14 +4,17 @@
   padding-bottom: rem(82);
 
   @include mq("md") {
-    position: relative;
     padding-top: rem(140);
     padding-bottom: rem(140);
   }
 }
 
 .voice__inner {
-  max-width: rem(600);
+  // max-width: rem(600);
+  
+  @include mq("md") {
+    position: relative;
+  }
 }
 
 .voice__bg-image-fishes {
@@ -22,8 +25,8 @@
     width: rem(301);
     max-width: 100%;
     position: absolute;
-    top: rem(24);
-    left: rem(100);
+    top: rem(-115);
+    left: rem(-55);
   }
 }
 
@@ -35,8 +38,8 @@
     width: rem(71);
     max-width: 100%;
     position: absolute;
-    bottom: rem(68);
-    right: rem(180);
+    bottom: rem(-71);
+    right: rem(25);
   }
 }
 

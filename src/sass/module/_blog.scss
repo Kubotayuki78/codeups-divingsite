@@ -26,6 +26,11 @@
   }
 }
 
+.blog__inner {
+  max-width: rem(600);
+  position: relative;
+}
+
 .blog__bg-image {
   display: none;
 
@@ -37,10 +42,6 @@
     top: rem(24);
     left: rem(100);
   }
-}
-
-.blog__inner {
-  max-width: rem(600);
 }
 
 .blog__heading {
@@ -73,8 +74,8 @@
 .blog__cards {
   display: grid;
   gap: 40px;
-  margin-top: rem(30);
-  
+  margin-top: rem(32);
+
   @include mq("md") {
     flex-direction: row;
     margin-top: rem(86);

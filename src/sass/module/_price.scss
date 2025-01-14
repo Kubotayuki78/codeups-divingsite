@@ -5,13 +5,15 @@
   padding-bottom: rem(84);
 
   @include mq("md") {
-    position: relative;
     padding-top: rem(100);
     padding-bottom: rem(102);
   }
 }
 
 .price__inner {
+  @include mq("md") {
+    position: relative;
+  }
 }
 
 .price__heading {
@@ -42,10 +44,9 @@
   @include mq("md") {
     display: block;
     position: absolute;
-    bottom: rem(60);
-    left: rem(100);
-    width: 30%;
-    max-width: 437px;
+    bottom: rem(-40);
+    left: rem(-55);
+    width: rem(437);
   }
 }
 
@@ -56,14 +57,15 @@
 }
 
 .price__lists {
-  margin-top: rem(40);
+  margin-top: rem(42);
   display: flex;
   flex-direction: column;
-  gap: rem(12);
+  gap: rem(9);
 
   @include mq("md") {
     margin-top: rem(0);
     width: 45.6%;
+    gap: rem(12);
   }
 }
 
