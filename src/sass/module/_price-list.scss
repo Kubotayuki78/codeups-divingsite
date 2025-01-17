@@ -5,7 +5,7 @@
   line-height: 1.5;
   // margin-top: rem(40);
   padding-bottom: rem(4);
-  border-bottom: 1px solid $accent-color;
+  border-bottom: rem(1) solid $accent-color;
 
   @include mq("md") {
     padding-bottom: rem(3);
@@ -13,7 +13,7 @@
 }
 
 .price-list__title:not(:first-child) {
-  margin-top: rem(30);
+  margin-top: rem(31);
 
   @include mq("md") {
     margin-top: rem(24);
@@ -23,7 +23,7 @@
 .price-list {
   display: flex;
   flex-direction: column;
-  gap: rem(12);
+  gap: rem(11);
   // max-width: rem(600);
 
   @include mq("md") {

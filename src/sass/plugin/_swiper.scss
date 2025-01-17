@@ -12,18 +12,20 @@
 
 .campaign-swiper-arrow {
   display: none;
+
   @include mq("md") {
-    display: block;
+    display: flex;
   }
 }
 
 .campaign-swiper-arrow__wrapper {
   @include mq("md") {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 0;
-    right: rem(25);
-    display: inline-flex;
-    gap: rem(80);
+    right: rem(15);
+    top: rem(-83);
+    width: rem(260);
   }
 }
 
@@ -32,9 +34,9 @@
   width: rem(80);
   height: rem(80);
   border-radius: 50%;
-  border: 1px solid $accent-color;
+  border: rem(1) solid $accent-color;
   background-color: $white;
-  cursor: pointer;
+  // cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
@@ -60,17 +62,17 @@
 
 .campaign-swiper-arrow__prev::before,
 .campaign-swiper-arrow__next::before {
-  top: calc(50% - 2px);
+  top: calc(50% - rem(2));
   width: rem(10);
   height: rem(1);
 }
 
 .campaign-swiper-arrow__prev::before {
-  transform: translateY(calc(-50% - 1px)) rotate(-37deg);
+  transform: translateY(calc(-50% - rem(1))) rotate(-37deg);
 }
 
 .campaign-swiper-arrow__next::before {
-  transform: translateY(calc(-50% - 1px)) rotate(37deg);
+  transform: translateY(calc(-50% - rem(1))) rotate(37deg);
 }
 
 .campaign-swiper-arrow__prev::after,

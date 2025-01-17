@@ -18,7 +18,7 @@
 .footer__links {
   @include mq("md") {
     display: flex;
-    gap: 40px;
+    gap: rem(40);
   }
 }
 
@@ -47,8 +47,8 @@
   height: rem(22);
 
   @include mq("md") {
-    width: 32px;
-    height: 32px;
+    width: rem(32);
+    height: rem(32);
   }
 }
 

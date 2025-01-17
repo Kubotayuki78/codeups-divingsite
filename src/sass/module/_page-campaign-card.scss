@@ -1,6 +1,32 @@
 @use "global" as *;
 
-.page-campaign__cards {
+
+.page-campaign-card__image {
   @include mq("md") {
+    aspect-ratio: 520/347;
   }
+}
+
+.page-campaign-card__body {
+}
+
+.page-campaign-card__body-tag {
+}
+
+.page-campaign-card__body-title {
+}
+
+.page-campaign-card__body-text {
+}
+
+.page-campaign-card__body-price {
+}
+
+.page-campaign-card__body-price-before {
+}
+
+.page-campaign-card__body-price-after {
+}
+
+.page-campaign__button {
 }

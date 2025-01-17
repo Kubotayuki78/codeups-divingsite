@@ -13,21 +13,23 @@
   position: relative;
 }
 
+.campaign__inner.inner {
+  padding-right: 0;
+}
+
+
 .campaign__heading {
-  padding-top: rem(4);
+  margin-top: rem(4);
 
   @include mq("md") {
-    padding-top: rem(1);
+    margin-top: rem(1);
   }
 }
 
 .campaign__cards {
   margin-top: rem(32);
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
-  // gap: 0;
-  // gap: 40px;
+  display: flex;
+  gap: rem(40);
 
   @include mq("md") {
     width: 100vw;

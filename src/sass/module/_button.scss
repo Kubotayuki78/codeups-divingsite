@@ -4,13 +4,13 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  width: 202px;
+  width: rem(202);
   padding: rem(16) rem(40);
   font-family: $english-family;
   background-color: $accent-color;
-  font-size: 14px;
+  font-size: rem(14);
   color: $white;
-  border: 1px solid $accent-color;
+  border: rem(1) solid $accent-color;
   text-align: center;
   // overflow: hidden;
   position: relative;
@@ -18,14 +18,13 @@
   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
-
 .btn::before {
   position: absolute;
   right: rem(-4);
   top: rem(4);
   width: 100%;
   height: 100%;
-  border: 1px solid $accent-color;
+  border: rem(1) solid $accent-color;
   transition: 0.3s;
   content: "";
   z-index: -1;
@@ -62,9 +61,9 @@
 }
 
 .btn span::before {
-  top: calc(50% - 2px);
+  top: calc(50% - rem(2));
   right: rem(40);
-  transform: translateY(calc(-50% - 1px)) rotate(37deg);
+  transform: translateY(calc(-50% - rem(1))) rotate(37deg);
   width: rem(10);
   height: rem(1);
 }

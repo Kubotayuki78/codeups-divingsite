@@ -3,12 +3,11 @@
 .breadcrumb {
   list-style: none;
   display: flex;
-  padding: 0;
-  padding: 10px;
+  padding-top: rem(10);
 }
 
 .breadcrumb-item {
-  margin-right: 10px;
+  margin-right: rem(10);
 }
 
 .breadcrumb-item a {
@@ -21,7 +20,7 @@
 
 .breadcrumb-item::after {
   content: ">";
-  margin-left: 10px;
+  margin-left: rem(10);
   color: #6c757d;
 }
 

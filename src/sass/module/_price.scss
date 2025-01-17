@@ -3,10 +3,12 @@
   background-color: #ddf0f1;
   padding-top: rem(80);
   padding-bottom: rem(84);
+  margin-top: rem(82);
 
   @include mq("md") {
-    padding-top: rem(100);
+    padding-top: rem(96);
     padding-bottom: rem(102);
+    margin-top: rem(145);
   }
 }
 
@@ -17,7 +19,7 @@
 }
 
 .price__heading {
-  padding-top: rem(5);
+  margin-top: rem(5);
 }
 
 .price__content {
@@ -45,8 +47,8 @@
     display: block;
     position: absolute;
     bottom: rem(-40);
-    left: rem(-55);
     width: rem(437);
+    right: min(rem(750), 58vw);
   }
 }
 
@@ -91,7 +93,7 @@
 }
 
 .price__button {
-  margin-top: rem(38);
+  margin-top: rem(42);
   text-align: center;
 
   @include mq("md") {

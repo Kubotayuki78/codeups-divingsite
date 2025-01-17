@@ -2,7 +2,7 @@
 
 .voice-card {
   padding: rem(15) rem(16) rem(24);
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
 
   @include mq("md") {
     padding: rem(24);
@@ -46,7 +46,7 @@
   line-height: 1.83;
   display: inline-flex;
   padding: rem(3) rem(11);
-  border: 1px solid $accent-color;
+  border: rem(1) solid $accent-color;
 
   @include mq("md") {
     padding: rem(6) rem(16);
@@ -54,11 +54,11 @@
 }
 
 .voice-card__head-body-title {
-  padding-top: rem(4);
+  margin-top: rem(4);
   font-size: rem(16);
   font-weight: 500;
   padding-bottom: rem(4);
-  border-bottom: 1px solid $accent-color;
+  border-bottom: rem(1) solid $accent-color;
   line-height: 1.45;
 
   @include mq("md") {
@@ -66,15 +66,15 @@
   }
 }
 
-.voice-card____head-image {
-  padding-top: rem(9);
+.voice-card__head-image {
+  margin-top: rem(9);
   width: 48.2%;
   aspect-ratio: 151/117; // 幅 / 高さ
   overflow: hidden;
 
   @include mq("md") {
     width: 38.1%;
-    padding-top: rem(0);
+    margin-top: rem(0);
   }
 }
 
@@ -85,11 +85,11 @@
 }
 
 .voice-card__body {
-  padding-top: rem(15);
+  margin-top: rem(15);
   color: $black;
   line-height: 1.5;
 
   @include mq("md") {
-    padding-top: rem(40);
+    margin-top: rem(40);
   }
 }

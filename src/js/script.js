@@ -40,6 +40,18 @@ jQuery(function ($) {
     }
   });
 
+  // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+  $(".drawer-icon").click(function () {
+    // 現在のbodyタグのoverflowスタイルを確認
+    if ($("body").css("overflow") === "hidden") {
+      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+    } else {
+      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
+    }
+  });
+
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
   $(document).on("click", 'a[href*="#"]', function () {
@@ -57,20 +69,22 @@ jQuery(function ($) {
     allowTouchMove: false,
     clickable: false,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
     },
+    effect: "fade", //追加 フェード機能をONにする
+    speed: 2000, //追加
   });
 
   const swiper2 = new Swiper(".cardSwiper", {
-    slidesPerView: "1.2",
+    slidesPerView: "1.264",
     spaceBetween: 20,
     loop: true,
     centeredSlidesBounds: false, //アクティブなスライドを中央に配置
     centeredSlides: false, //スライダーの最初と最後に余白を追加せずスライドが真ん中に配置される
 
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+      // el: ".swiper-pagination",
+      // clickable: true,
     },
     breakpoints: {
       768: {
@@ -79,8 +93,8 @@ jQuery(function ($) {
         slidesPerView: "3", //一度に表示するスライド枚数
 
         navigation: {
-          nextEl: ".campaign-swiper-arrow__next",
-          prevEl: ".campaign-swiper-arrow__prev",
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       },
       1200: {
@@ -89,8 +103,8 @@ jQuery(function ($) {
         slidesPerView: "3.97", //一度に表示するスライド枚数
 
         navigation: {
-          nextEl: ".campaign-swiper-arrow__next",
-          prevEl: ".campaign-swiper-arrow__prev",
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       },
     },
@@ -124,4 +138,3 @@ jQuery(function ($) {
     });
   });
 });
-

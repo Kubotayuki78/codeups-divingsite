@@ -8,7 +8,9 @@
   justify-content: center;
   align-items: center;
   gap: rem(40);
+  height: 100%;
 }
+
 .pc-nav__item {
   text-align: center;
 }
@@ -19,8 +21,6 @@
   font-size: rem(18);
   line-height: 1;
   transition: color 0.3s;
-  padding-top: rem(20);
-  padding-bottom: rem(40);
 }
 
 .pc-nav__item a span {

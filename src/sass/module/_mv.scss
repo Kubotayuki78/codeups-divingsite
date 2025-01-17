@@ -9,8 +9,11 @@
 }
 
 .mv__image {
-  aspect-ratio: 375/667; // 幅 / 高さ
-  overflow: hidden;
+  // aspect-ratio: 375/667; // 幅 / 高さ
+  // overflow: hidden;
+
+  @include mq("md") {
+  }
 }
 
 .mv__image img {
@@ -32,15 +35,15 @@
   font-family: Lato;
   font-size: rem(40);
   font-weight: 400;
-  letter-spacing: 21.6px;
-  margin-left: rem(21.6);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
 
   @include mq("md") {
     font-size: rem(80);
     font-weight: 400;
     line-height: 1;
-    letter-spacing: 43.2px;
-    margin-left: rem(43.2);
+    letter-spacing: 0.54em;
+    text-indent: 0.54em;
   }
 }
 

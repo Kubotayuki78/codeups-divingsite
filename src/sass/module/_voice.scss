@@ -1,11 +1,11 @@
 @use "global" as *;
 .voice {
-  padding-top: rem(80);
-  padding-bottom: rem(82);
+  margin-top: rem(89);
+  // padding-bottom: rem(82);
 
   @include mq("md") {
-    padding-top: rem(140);
-    padding-bottom: rem(140);
+    margin-top: rem(143);
+    // padding-bottom: rem(140);
   }
 }
 
@@ -26,7 +26,7 @@
     max-width: 100%;
     position: absolute;
     top: rem(-115);
-    left: rem(-55);
+    right: min(rem(884), 63vw);
   }
 }
 
@@ -44,21 +44,21 @@
 }
 
 .voice__heading {
-  padding-top: rem(8);
+  margin-top: rem(8);
 
   @include mq("md") {
-    padding-top: rem(6);
+    margin-top: rem(6);
   }
 }
 
 .voice__cards {
-  padding-top: rem(46);
+  margin-top: rem(46);
   gap: rem(40);
   display: grid;
 
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);
-    padding-top: rem(33);
+    margin-top: rem(33);
     flex-direction: row;
   }
 }

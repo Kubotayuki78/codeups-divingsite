@@ -6,8 +6,8 @@
   bottom: rem(15);
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid $accent-color;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: rem(1) solid $accent-color;
+  filter: drop-shadow(rem(0) rem(4) rem(4) rgba(0, 0, 0, 0.25));
   z-index: 100;
 
   @include mq("md") {
@@ -60,8 +60,8 @@
 .to-top a span::before {
   top: 0;
   left: rem(-2);
-  width: 1px;
-  height: 10px;
+  width: rem(1);
+  height: rem(10);
   transform: rotate(40deg);
   @include mq("md") {
     left: 0;

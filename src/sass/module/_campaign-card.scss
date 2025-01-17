@@ -1,24 +1,22 @@
 @use "global" as *;
 
 .campaign-card {
-  // width: rem(280);
-  // max-width: 100%;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-  display: grid;
-  // grid-template-rows: subgrid;
-  grid-row: span 4;
-  // gap: 0;
-  // gap: 20px;
+  // width: 333px;
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
 .campaign-card__image {
-  aspect-ratio: 288/190; // 幅 / 高さ
+  aspect-ratio: 284/190; // 幅 / 高さ
   overflow: hidden;
 
   @include mq("md") {
     aspect-ratio: 333/223;
   }
 }
+
 .campaign-card__image img {
   width: 100%;
   height: 100%;
@@ -35,9 +33,9 @@
 }
 
 .campaign-card__tag {
-  border: 1px solid $accent-color;
+  border: rem(1) solid $accent-color;
   display: inline-flex;
-  padding: rem(4) rem(12);
+  padding: rem(3) rem(11);
   align-items: center;
   font-size: rem(12);
   line-height: rem(22);
@@ -48,7 +46,7 @@
   }
 }
 
-.campaign-card__body-title {
+.campaign-card__title {
   margin-top: rem(4);
   font-weight: 500;
   line-height: rem(24);
@@ -56,7 +54,7 @@
   position: relative;
 }
 
-.campaign-card__body-title::after {
+.campaign-card__title::after {
   content: "";
   display: block;
   width: 100%;
@@ -67,7 +65,12 @@
   left: 0;
 }
 
-.campaign-card__body-text {
+.campaign-card__foot {
+  text-align: center;
+  margin-top: auto;
+}
+
+.campaign-card__text {
   font-size: rem(14);
   text-align: center;
 
@@ -77,13 +80,13 @@
   }
 }
 
-.campaign-card__body-price {
+.campaign-card__price {
   margin-top: rem(8);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: flex-end;
   gap: rem(16);
-  margin-bottom: rem(24);
+  margin-bottom: rem(26);
 
   @include mq("md") {
     gap: rem(25);
@@ -91,25 +94,25 @@
   }
 }
 
-.campaign-card__body-price-before,
-.campaign-card__body-price-after {
+.campaign-card__price-before,
+.campaign-card__price-after {
   font-family: "Lato";
   line-height: 1;
   font-weight: $bold;
 }
 
-.campaign-card__body-price-before {
+.campaign-card__price-before {
   font-size: rem(20);
   text-decoration: line-through;
   text-decoration-color: #c94800;
-  text-decoration-thickness: 3px; /* 線の太さ */
+  text-decoration-thickness: rem(3); /* 線の太さ */
 
   @include mq("md") {
     font-size: rem(24);
   }
 }
 
-.campaign-card__body-price-after {
+.campaign-card__price-after {
   font-size: rem(32);
   color: $accent-color;
 
