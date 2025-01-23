@@ -46,6 +46,6 @@
   transition: transform 0.3s;
 }
 
-.pc-nav__item a span:hover::after {
+.pc-nav__item a:hover span::after {
   transform: scale(1, 1);
 }

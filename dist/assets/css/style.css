@@ -152,7 +152,6 @@ a {
 
 .about__inner {
 	max-width: 37.5rem;
-	position: relative;
 }
 
 .about__heading {
@@ -185,10 +184,6 @@ a {
 	top: 0;
 	width: 37%;
 	z-index: 1;
-}
-
-.about__deco {
-	display: none;
 }
 
 .about__content {
@@ -253,24 +248,15 @@ a {
 }
 
 .blog-card__body-title {
+	border-bottom: 1px solid #408f95;
 	font-size: 1rem;
 	font-weight: 500;
+	padding-bottom: 0.1875rem;
 	position: relative;
 }
 
-.blog-card__body-title::after {
-	background-color: #408f95;
-	bottom: -0.3125rem;
-	content: "";
-	display: block;
-	height: 0.0625rem;
-	left: 0;
-	position: absolute;
-	width: 100%;
-}
-
 .blog-card__body-text {
-	margin-top: 1.25rem;
+	margin-top: 1rem;
 }
 
 .blog {
@@ -280,11 +266,6 @@ a {
 
 .blog__inner {
 	max-width: 37.5rem;
-	position: relative;
-}
-
-.blog__bg-image {
-	display: none;
 }
 
 .blog__heading {
@@ -451,22 +432,12 @@ a {
 }
 
 .campaign-card__title {
+	border-bottom: 1px solid #408f95;
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.5rem;
 	margin-top: 0.25rem;
-	position: relative;
-}
-
-.campaign-card__title::after {
-	background-color: #408f95;
-	bottom: -0.5rem;
-	content: "";
-	display: block;
-	height: 0.0625rem;
-	left: 0;
-	position: absolute;
-	width: 100%;
+	padding-bottom: 0.4375rem;
 }
 
 .campaign-card__foot {
@@ -590,9 +561,20 @@ div.colorbox-fv img {
 
 .contact {
 	filter: drop-shadow(0rem 0.1875rem 0.0625rem #ccc);
-	overflow: hidden;
-	padding-bottom: 6.4375rem;
 	padding-top: 5rem;
+}
+
+.contact::after {
+	background-image: url("../images/common/deco-fishes-to-left.png");
+	background-size: contain;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 3.125rem; /*画像の高さ*/
+	position: absolute;
+	right: calc(50% - min(48%, 10.75rem));
+	top: 3.375rem;
+	vertical-align: middle;
+	width: 6.8125rem; /*画像の幅*/
 }
 
 .contact__inner {
@@ -636,7 +618,7 @@ div.colorbox-fv img {
 }
 
 .contact__body-address p + p {
-	padding-top: 0.25rem;
+	margin-top: 0.25rem;
 }
 
 .contact__body-map {
@@ -782,6 +764,7 @@ div.colorbox-fv img {
 .footer {
 	background: #408f95;
 	color: #fff;
+	margin-top: 6.4375rem;
 	padding-bottom: 3.5rem;
 	padding-top: 3rem;
 }
@@ -985,179 +968,6 @@ div.colorbox-fv img {
 	text-align: center;
 }
 
-.page-about-head__inner {
-	position: relative;
-}
-
-.page-about-head__images {
-	aspect-ratio: 345/228;
-	margin-top: 3.25rem;
-}
-
-.page-about-head__image1 img {
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
-}
-
-.page-about__head-head-image {
-	position: absolute;
-	top: -1.5rem;
-	width: 7.5rem;
-	z-index: -1;
-}
-
-.page-about-head__foot-image {
-	display: none;
-}
-
-.page-about-head__title {
-	color: #fff;
-	left: 1.5rem;
-	position: absolute;
-	top: 1.5rem;
-	z-index: 2;
-}
-
-.container {
-	grid-gap: 0.5rem;
-	display: grid;
-	gap: 0.5rem;
-	grid-auto-flow: row;
-	grid-template-areas: "item1 item1 item1" "item2 item2 item2" "item3 item3 item3" "item4 item4 item4" "item5 item5 item5" "item6 item6 item6";
-	height: 31.25rem;
-}
-
-.page-about-gallery__pic1 {
-	-o-object-fit: cover;
-	aspect-ratio: 345/523;
-	grid-area: item1;
-	object-fit: cover;
-	overflow: hidden;
-	width: 100%;
-}
-
-.page-about-gallery__pic2 {
-	aspect-ratio: 345/219;
-	grid-area: item2;
-	overflow: hidden;
-}
-
-.page-about-gallery__pic2 img {
-	-o-object-fit: cover;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-}
-
-.page-about-gallery__pic3 {
-	background: sandybrown;
-	grid-area: item3;
-}
-
-.page-about-gallery__pic4 {
-	background: lightgreen;
-	grid-area: item4;
-}
-
-.page-about-gallery__pic5 {
-	background: lightblue;
-	grid-area: item5;
-}
-
-.page-about-gallery__pic6 {
-	background: chocolate;
-	grid-area: item6;
-}
-
-.page-campaign__inner {
-	position: relative;
-}
-
-.page-campaign__tags {
-	grid-gap: 1.375rem 0.9375rem;
-	display: grid;
-	gap: 1.375rem 0.9375rem;
-	grid-template-columns: repeat(2, 1fr);
-	margin-top: 3.25rem;
-}
-
-.page-campaign__tag a {
-	background-color: #fff;
-	border: 0.0625rem solid #408f95;
-	color: #408f95;
-	display: inline-block;
-	line-height: 1.5714;
-	padding: 0.375rem 0.3125rem;
-	text-align: center;
-	transition: background-color 0.3s, color 0.3s;
-	width: 10.125rem;
-}
-
-.page-campaign__tag a:hover {
-	background-color: #408f95;
-	color: #fff;
-}
-
-.page-campaign__head-image {
-	position: absolute;
-	top: 33.25rem;
-	width: 7.5rem;
-	z-index: -1;
-}
-
-.page-campaign__cards {
-	grid-row-gap: 2.5rem;
-	display: grid;
-	margin-top: 2.5rem;
-	padding-left: 2.0625rem;
-	padding-right: 2.0625rem;
-	row-gap: 2.5rem;
-}
-
-.page-fv {
-	margin: 0 calc(50% - 50vw);
-	position: relative;
-	width: 100vw;
-}
-
-.page-fv-image {
-	aspect-ratio: 375/460;
-	overflow: hidden;
-}
-
-.page-fv-image img {
-	-o-object-fit: cover;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-}
-
-.page-fv-heading {
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.page-fv-heading__title-en {
-	color: #fff;
-	font-family: Lato;
-	font-size: 2.5rem;
-	font-weight: 400;
-}
-
-.page-heading-en {
-	color: #fff;
-	font-family: Lato;
-	font-size: 2.5rem;
-	font-weight: 400;
-	line-height: 1;
-	text-transform: uppercase;
-}
-
 .pagination {
 	align-items: center;
 	display: flex;
@@ -1257,7 +1067,7 @@ div.colorbox-fv img {
 	width: calc(100% + 0.375rem);
 }
 
-.pc-nav__item a span:hover::after {
+.pc-nav__item a:hover span::after {
 	transform: scale(1, 1);
 }
 
@@ -1312,10 +1122,6 @@ div.colorbox-fv img {
 	aspect-ratio: 345/227;
 	margin-top: 1.9375rem;
 	overflow: hidden;
-}
-
-.price__bg-image {
-	display: none;
 }
 
 .price__head-image img {
@@ -1532,14 +1338,6 @@ div.colorbox-fv img {
 	margin-top: 5.5625rem;
 }
 
-.voice__bg-image-fishes {
-	display: none;
-}
-
-.voice__bg-image-seadragon {
-	display: none;
-}
-
 .voice__heading {
 	margin-top: 0.5rem;
 }
@@ -1552,7 +1350,7 @@ div.colorbox-fv img {
 }
 
 .voice__button {
-	padding-top: 2.5rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -1651,9 +1449,21 @@ html {
 }
 
 .about {
-	margin-top: 7.8125rem;
-	overflow: hidden;
-	padding-bottom: 5.5rem;
+	margin-top: 8.4375rem;
+	position: relative;
+}
+
+.about::after {
+	background-image: url(../images/common/deco-coral.png);
+	background-size: contain;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 11.3125rem; /*画像の高さ*/
+	position: absolute;
+	right: calc(50% - min(48%, 40rem));
+	top: 42.25rem;
+	vertical-align: middle;
+	width: 12.125rem; /*画像の幅*/
 }
 
 .about__heading {
@@ -1668,23 +1478,13 @@ html {
 	top: 5rem;
 }
 
-.about__deco {
-	bottom: -5.5rem;
-	display: block;
-	height: 11.3125rem;
-	left: min(63.125rem, 70vw);
-	position: absolute;
-	width: 12.125rem;
-	z-index: 1;
-}
-
 .about__content {
 	display: flex;
 	justify-content: space-between;
-	left: 57%;
+	left: 55.6%;
 	max-width: 52.5rem;
 	position: absolute;
-	top: 17.1875rem;
+	top: 16.5625rem;
 	transform: translateX(-50%);
 	width: 100%;
 	z-index: 2;
@@ -1721,7 +1521,7 @@ html {
 
 .blog {
 	margin-top: 0;
-	margin-top: 6.25rem;
+	padding-top: 6.25rem;
 }
 
 .blog::before {
@@ -1739,13 +1539,17 @@ html {
 	z-index: -2;
 }
 
-.blog__bg-image {
-	display: block;
+.blog::after {
+	background-image: url(../images/common/deco-fishes-to-left-white.png);
+	background-size: contain;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 12.5625rem; /*画像の高さ*/
+	left: calc(50% - min(48%, 38.75rem));
 	position: absolute;
-	right: min(47.3125rem, 58vw);
-	top: -4.5625rem;
-	width: 27rem;
-	z-index: -1;
+	top: 1.5rem;
+	vertical-align: middle;
+	width: 27.3125rem; /*画像の幅*/
 }
 
 .blog__heading {
@@ -1790,7 +1594,7 @@ html {
 
 .campaign-card__text {
 	font-size: 1rem;
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 }
 
 .campaign-card__price {
@@ -1827,8 +1631,14 @@ html {
 }
 
 .contact {
-	padding-bottom: 10rem;
 	padding-top: 8.75rem;
+}
+
+.contact::after {
+	height: 8.625rem; /*画像の高さ*/
+	right: calc(50% - min(48%, 41.875rem));
+	top: 6.25rem;
+	width: 18.8125rem; /*画像の幅*/
 }
 
 .contact__inner {
@@ -1846,6 +1656,7 @@ html {
 	box-shadow: 0.25rem 0.25rem 0.625rem 0rem rgba(0, 0, 0, 0.25);
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 0.625rem;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 67.5rem;
@@ -1916,6 +1727,7 @@ html {
 }
 
 .footer {
+	margin-top: 10rem;
 	padding-bottom: 5rem;
 	padding-top: 5rem;
 }
@@ -1977,8 +1789,8 @@ html {
 }
 
 .info {
-	margin-top: 4.8125rem;
-	padding-bottom: 4.75rem;
+	margin-top: 10.25rem;
+	padding-bottom: 4.8125rem;
 	padding-top: 6.25rem;
 }
 
@@ -2033,67 +1845,6 @@ html {
 	text-align: center;
 }
 
-.page-about__head-head-image {
-	left: -4.0625rem;
-	max-width: 100%;
-	top: 42.125rem;
-	width: 18.8125rem;
-}
-
-.page-about-head__foot-image {
-	left: -4.0625rem;
-	max-width: 100%;
-	position: absolute;
-	top: 42.125rem;
-	width: 18.8125rem;
-	z-index: -1;
-}
-
-.container {
-	gap: 0.5rem 0.5rem;
-	grid-template-areas: "item1 item2 item2" "item1 item3 item3" "item4 item4 item6" "item5 item5 item6";
-	grid-template-columns: 1fr 0.2fr 1.8fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-.page-campaign-card__image {
-	aspect-ratio: 520/347;
-}
-
-.page-campaign__tags {
-	gap: 1.3125rem 1rem;
-	grid-template-columns: repeat(6, 1fr);
-	margin-top: 9.375rem;
-}
-
-.page-campaign__head-image {
-	left: -4.0625rem;
-	max-width: 100%;
-	top: 42.125rem;
-	width: 18.8125rem;
-}
-
-.page-campaign__cards {
-	gap: 5rem 2.5rem;
-	grid-template-columns: repeat(2, 1fr);
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.page-fv-image {
-	aspect-ratio: 1440/548;
-}
-
-.page-fv-heading__title-en {
-	font-size: 5rem;
-	line-height: 1.25;
-}
-
-.page-heading-en {
-	font-size: 5rem;
-	line-height: 1.25;
-}
-
 .price-list__title {
 	padding-bottom: 0.1875rem;
 }
@@ -2124,10 +1875,20 @@ html {
 	margin-top: 9.0625rem;
 	padding-bottom: 6.375rem;
 	padding-top: 6rem;
+	position: relative;
 }
 
-.price__inner {
-	position: relative;
+.price::after {
+	background-image: url("../images/common/deco-fishes-to-left.png");
+	background-size: contain;
+	bottom: 3.75rem;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 12.5625rem; /*画像の高さ*/
+	left: calc(50% - min(48%, 38.75rem));
+	position: absolute;
+	vertical-align: middle;
+	width: 27.3125rem; /*画像の幅*/
 }
 
 .price__content {
@@ -2138,14 +1899,6 @@ html {
 
 .price__head-image {
 	display: none;
-}
-
-.price__bg-image {
-	bottom: -2.5rem;
-	display: block;
-	position: absolute;
-	right: min(46.875rem, 58vw);
-	width: 27.3125rem;
 }
 
 .price__lists {
@@ -2229,28 +1982,33 @@ html {
 
 .voice {
 	margin-top: 8.9375rem;
-}
-
-.voice__inner {
 	position: relative;
 }
 
-.voice__bg-image-fishes {
-	display: block;
-	max-width: 100%;
+.voice::before {
+	background-image: url("../images/common/deco-fishes-to-right.png");
+	background-size: contain;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 8.625rem; /*画像の高さ*/
+	left: calc(50% - min(48%, 38.75rem));
 	position: absolute;
-	right: min(55.25rem, 63vw);
-	top: -7.1875rem;
-	width: 18.8125rem;
+	top: -7.5rem;
+	vertical-align: middle;
+	width: 18.8125rem; /*画像の幅*/
 }
 
-.voice__bg-image-seadragon {
-	bottom: -4.4375rem;
-	display: block;
-	max-width: 100%;
+.voice::after {
+	background-image: url("../images/common/deco-seadragon.png");
+	background-size: contain;
+	bottom: -4.5625rem;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 10.125rem; /*画像の高さ*/
 	position: absolute;
-	right: 1.5625rem;
-	width: 4.4375rem;
+	right: calc(50% - min(48%, 33.75rem));
+	vertical-align: middle;
+	width: 4.4375rem; /*画像の幅*/
 }
 
 .voice__heading {
@@ -2264,7 +2022,7 @@ html {
 }
 
 .voice__button {
-	padding-top: 5rem;
+	margin-top: 5rem;
 }
 
 .campaign-swiper-arrow {

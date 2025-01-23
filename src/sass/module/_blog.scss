@@ -5,7 +5,7 @@
 
   @include mq("md") {
     margin-top: 0;
-    margin-top: rem(100);
+    padding-top: rem(100);
   }
 }
 
@@ -26,22 +26,24 @@
   }
 }
 
-.blog__inner {
-  max-width: rem(600);
-  position: relative;
+.blog::after {
+  @include mq("md") {
+    content: ""; /*何も入れない*/
+    position: absolute;
+    display: inline-block;
+    width: rem(437); /*画像の幅*/
+    height: rem(201); /*画像の高さ*/
+    background-image: url(../images/common/deco-fishes-to-left-white.png);
+    background-size: contain;
+    vertical-align: middle;
+    top: rem(24);
+    left: calc(50% - min(48%, rem(620)));
+  }
 }
 
-.blog__bg-image {
-  display: none;
-
-  @include mq("md") {
-    display: block;
-    position: absolute;
-    top: rem(-73);
-    right: min(rem(757), 58vw);
-    width: rem(432);
-    z-index: -1;
-  }
+.blog__inner {
+  max-width: rem(600);
+  // position: relative;
 }
 
 .blog__heading {

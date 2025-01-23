@@ -2,13 +2,30 @@
 
 .contact {
   padding-top: rem(80);
-  padding-bottom: rem(103);
   filter: drop-shadow(rem(0) rem(3) rem(1) #ccc);
-  overflow: hidden;
 
   @include mq("md") {
     padding-top: rem(140);
-    padding-bottom: rem(160);
+  }
+}
+
+.contact::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(109); /*画像の幅*/
+  height: rem(50); /*画像の高さ*/
+  background-image: url("../images/common/deco-fishes-to-left.png");
+  background-size: contain;
+  vertical-align: middle;
+  top: rem(54);
+  right: calc(50% - min(48%, rem(172)));
+
+  @include mq("md") {
+    top: rem(100);
+    right: calc(50% - min(48%, rem(670)));
+    width: rem(301); /*画像の幅*/
+    height: rem(138); /*画像の高さ*/
   }
 }
 
@@ -29,7 +46,7 @@
   @include mq("md") {
     width: rem(301);
     top: rem(-39);
-    left: min(rem(935), 70vw)
+    left: min(rem(935), 70vw);
   }
 }
 
@@ -44,6 +61,7 @@
     box-shadow: rem(4) rem(4) rem(10) rem(0) rgba(0, 0, 0, 0.25);
     padding: rem(80) rem(50);
     position: relative;
+    margin-bottom: rem(10);
   }
 }
 
@@ -118,7 +136,7 @@
 }
 
 .contact__body-address p + p {
-  padding-top: rem(4);
+  margin-top: rem(4);
 }
 
 .contact__body-map {

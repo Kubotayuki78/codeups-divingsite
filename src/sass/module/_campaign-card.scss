@@ -51,18 +51,8 @@
   font-weight: 500;
   line-height: rem(24);
   font-size: rem(16);
-  position: relative;
-}
-
-.campaign-card__title::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: rem(1);
-  background-color: $accent-color;
-  position: absolute;
-  bottom: rem(-8);
-  left: 0;
+  padding-bottom: rem(7);
+  border-bottom: 1px solid $accent-color;
 }
 
 .campaign-card__foot {
@@ -75,7 +65,7 @@
   text-align: center;
 
   @include mq("md") {
-    margin-top: rem(24);
+    margin-top: rem(16);
     font-size: rem(16);
   }
 }
