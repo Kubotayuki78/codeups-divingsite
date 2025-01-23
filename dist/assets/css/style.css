@@ -442,6 +442,9 @@ a {
 
 .campaign-card__foot {
 	margin-top: auto;
+	padding-bottom: 1.625rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	text-align: center;
 }
 
@@ -455,7 +458,6 @@ a {
 	display: inline-flex;
 	gap: 1rem;
 	justify-content: center;
-	margin-bottom: 1.625rem;
 	margin-top: 0.5rem;
 }
 
@@ -1592,6 +1594,10 @@ html {
 	padding: 0.3125rem 0.9375rem;
 }
 
+.campaign-card__foot {
+	padding-bottom: 2.5rem;
+}
+
 .campaign-card__text {
 	font-size: 1rem;
 	margin-top: 1rem;
@@ -1599,7 +1605,6 @@ html {
 
 .campaign-card__price {
 	gap: 1.5625rem;
-	margin-bottom: 2.5rem;
 }
 
 .campaign-card__price-before {

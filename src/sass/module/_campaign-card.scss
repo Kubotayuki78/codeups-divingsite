@@ -58,6 +58,12 @@
 .campaign-card__foot {
   text-align: center;
   margin-top: auto;
+  padding-inline: rem(16);
+  padding-bottom: rem(26);
+
+  @include mq("md") {
+    padding-bottom: rem(40);
+  }
 }
 
 .campaign-card__text {
@@ -76,11 +82,11 @@
   justify-content: center;
   align-items: flex-end;
   gap: rem(16);
-  margin-bottom: rem(26);
+  // margin-bottom: rem(26);
 
   @include mq("md") {
     gap: rem(25);
-    margin-bottom: rem(40);
+    // margin-bottom: rem(40);
   }
 }
 
