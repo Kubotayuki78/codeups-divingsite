@@ -53,3 +53,15 @@
     display: block;
   }
 }
+
+.header__inner {
+  transition: background-color 0.3s ease;
+}
+
+// .header__inner:has(.drawer-icon.is-checked) {
+//   background-color: $accent-color;
+// }
+
+.header__inner.active {
+  background: $accent-color;
+}

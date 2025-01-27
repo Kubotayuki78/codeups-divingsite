@@ -1,5 +1,87 @@
 @use "global" as *;
 
+// .btn {
+//   display: inline-flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   width: rem(202);
+//   padding: rem(16) rem(40);
+//   font-family: $english-family;
+//   background-color: $accent-color;
+//   font-size: rem(14);
+//   color: $white;
+//   border: rem(1) solid $accent-color;
+//   text-align: center;
+//   // overflow: hidden;
+//   position: relative;
+//   z-index: 1;
+//   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+// }
+
+// .btn::before {
+//   position: absolute;
+//   right: rem(-4);
+//   top: rem(4);
+//   width: 100%;
+//   height: 100%;
+//   border: rem(1) solid $accent-color;
+//   transition: 0.3s;
+//   content: "";
+//   z-index: -1;
+// }
+
+// .btn::after {
+//   background: $white;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   content: "";
+//   width: 100%;
+//   height: 100%;
+//   transform: scale(0, 1);
+//   transform-origin: left top;
+//   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+//   z-index: -1;
+// }
+
+
+// .btn:hover {
+//   color: $accent-color;
+// }
+
+// .btn:hover::after {
+//   transform: scale(1, 1);
+// }
+
+// .btn span::before,
+// .btn span::after {
+//   content: "";
+//   position: absolute;
+//   background-color: $white;
+//   transition: 0.5s;
+// }
+
+// .btn span::before {
+//   top: calc(50% - rem(2));
+//   right: rem(40);
+//   transform: translateY(calc(-50% - rem(1))) rotate(37deg);
+//   width: rem(10);
+//   height: rem(1);
+// }
+
+// .btn span::after {
+//   top: 50%;
+//   right: rem(40);
+//   transform: translateY(-50%);
+//   width: rem(40);
+//   height: rem(1);
+// }
+
+// .btn:hover span::before,
+// .btn:hover span::after {
+//   background-color: $accent-color;
+// }
+
 .btn {
   display: inline-flex;
   justify-content: space-between;
@@ -12,7 +94,6 @@
   color: $white;
   border: rem(1) solid $accent-color;
   text-align: center;
-  // overflow: hidden;
   position: relative;
   z-index: 1;
   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
@@ -44,12 +125,19 @@
   z-index: -1;
 }
 
-.btn:hover {
-  color: $accent-color;
-}
+@media (any-hover: hover) {
+  .btn:hover {
+    color: $accent-color;
+  }
 
-.btn:hover::after {
-  transform: scale(1, 1);
+  .btn:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .btn:hover span::before,
+  .btn:hover span::after {
+    background-color: $accent-color;
+  }
 }
 
 .btn span::before,
@@ -74,9 +162,4 @@
   transform: translateY(-50%);
   width: rem(40);
   height: rem(1);
-}
-
-.btn:hover span::before,
-.btn:hover span::after {
-  background-color: $accent-color;
 }

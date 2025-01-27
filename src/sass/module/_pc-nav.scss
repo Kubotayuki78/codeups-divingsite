@@ -46,6 +46,8 @@
   transition: transform 0.3s;
 }
 
-.pc-nav__item a:hover span::after {
-  transform: scale(1, 1);
+@media (any-hover: hover) {
+  .pc-nav__item a:hover span::after {
+    transform: scale(1, 1);
+  }
 }

@@ -82,15 +82,16 @@
   width: rem(40);
   height: rem(1);
 }
+@media (any-hover: hover) {
+  .campaign-swiper-arrow__prev:hover,
+  .campaign-swiper-arrow__next:hover {
+    background-color: $accent-color;
+  }
 
-.campaign-swiper-arrow__prev:hover,
-.campaign-swiper-arrow__next:hover {
-  background-color: $accent-color;
-}
-
-.campaign-swiper-arrow__prev:hover.campaign-swiper-arrow__prev::before,
-.campaign-swiper-arrow__prev:hover.campaign-swiper-arrow__prev::after,
-.campaign-swiper-arrow__next:hover.campaign-swiper-arrow__next::before,
-.campaign-swiper-arrow__next:hover.campaign-swiper-arrow__next::after {
-  background-color: $white;
+  .campaign-swiper-arrow__prev:hover.campaign-swiper-arrow__prev::before,
+  .campaign-swiper-arrow__prev:hover.campaign-swiper-arrow__prev::after,
+  .campaign-swiper-arrow__next:hover.campaign-swiper-arrow__next::before,
+  .campaign-swiper-arrow__next:hover.campaign-swiper-arrow__next::after {
+    background-color: $white;
+  }
 }

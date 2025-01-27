@@ -24,11 +24,11 @@
 }
 
 .campaign-card__body {
-  padding: rem(16);
+  padding-top: rem(16);
+  padding-inline: rem(16);
 
   @include mq("md") {
     padding-top: rem(25);
-    padding-bottom: 0;
   }
 }
 
@@ -67,11 +67,11 @@
 }
 
 .campaign-card__text {
+  margin-top: rem(16);
   font-size: rem(14);
   text-align: center;
 
   @include mq("md") {
-    margin-top: rem(16);
     font-size: rem(16);
   }
 }

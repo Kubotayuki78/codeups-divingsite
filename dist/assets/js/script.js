@@ -55,6 +55,9 @@ jQuery(function ($) {
       });
     }
   });
+  $(".drawer-icon").on("click", function () {
+    $(".header__inner").toggleClass("active", $(this).hasClass("is-checked"));
+  });
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 

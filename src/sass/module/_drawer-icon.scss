@@ -46,9 +46,3 @@
 .drawer-icon span:nth-of-type(3) {
   top: rem(18);
 }
-
-.drawer-icon.is-checked {
-  .header__inner {
-    background-color: $accent-color;
-  }
-}

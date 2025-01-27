@@ -44,9 +44,15 @@
     height: rem(40);
   }
 }
+@media (any-hover: hover) {
+  .to-top a:hover {
+    background-color: $accent-color;
+  }
 
-.to-top a:hover {
-  background-color: $accent-color;
+  .to-top a:hover span::before,
+  .to-top a:hover span::after {
+    background-color: $white;
+  }
 }
 
 .to-top a span::before,
@@ -77,13 +83,7 @@
 
   @include mq("md") {
     top: rem(20);
-
     width: rem(1);
     height: rem(40);
   }
-}
-
-.to-top a:hover span::before,
-.to-top a:hover span::after {
-  background-color: $white;
 }

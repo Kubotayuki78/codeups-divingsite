@@ -3,7 +3,7 @@
 .sp-nav {
   display: none;
   position: absolute;
-  top: 0;
+  top: rem(80);
   left: 0;
   right: 0;
   width: 100%;
@@ -16,7 +16,6 @@
 // .sp-nav.is-checked {
 //   display: none;
 // }
-
 
 .header__sp-nav.sp-nav {
 }
@@ -61,7 +60,8 @@
 }
 
 .sp-nav__section {
-  padding: rem(85) rem(21);
+  padding-inline: rem(21);
+  padding-bottom: rem(100);
   color: $white;
   background: $accent-color;
   column-count: 2;

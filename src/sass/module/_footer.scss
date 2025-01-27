@@ -47,10 +47,18 @@
 .footer__sns img {
   width: rem(22);
   height: rem(22);
+  transition: opacity 0.3s ease;
+
 
   @include mq("md") {
     width: rem(32);
     height: rem(32);
+  }
+}
+
+@media (any-hover: hover) {
+  .footer__sns a:hover img {
+    opacity: 0.6;
   }
 }
 
@@ -74,6 +82,5 @@
 
   @include mq("md") {
     font-size: rem(14);
-    
   }
 }
